@@ -1,0 +1,5 @@
+# Conclusiones
+
+- Ajustado a Serenity 4.x y APIs actuales.
+- Reporte Serenity con screenshots.
+- Listo para CI.
