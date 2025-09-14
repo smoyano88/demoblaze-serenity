@@ -5,6 +5,7 @@ Automatización de una **prueba funcional E2E** sobre https://www.demoblaze.com/
 ## Objetivo de la prueba
 
 Verificar el flujo de compra end-to-end:
+
 1. Agregar **dos productos** al carrito.
 2. **Visualizar** el carrito y validar la cantidad de ítems.
 3. **Completar** el formulario de compra.
@@ -34,6 +35,36 @@ Verificar el flujo de compra end-to-end:
 ## Ejecución local
 
 Clonar y entrar al proyecto:
+
 ```bash
+
 git clone https://github.com/smoyano88/demoblaze-serenity.git
-cd demoblaze-serenity```
+cd demoblaze-serenity
+```
+
+## Ejecución de pruebas y reporte
+
+Para ejecutar las pruebas y generar el reporte Serenity, puedes utilizar los siguientes comandos:
+
+- **Ejecución interactiva (abre navegador):**
+
+  ```bash
+  mvn -U clean verify
+  ```
+
+- **Ejecución en modo headless (sin interfaz gráfica):**
+  ```bash
+  mvn -U clean verify -Dheadless.mode=true -Dchrome.switches="--headless=new,--window-size=1366,768"
+  ```
+
+Al finalizar la ejecución, el reporte Serenity se genera en:
+
+- `target/site/serenity/index.html`
+
+Para abrir el reporte (por ejemplo, en macOS):
+
+```bash
+open target/site/serenity/index.html
+```
+
+En otros sistemas, abre el archivo `index.html` con tu navegador preferido.
